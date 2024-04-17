@@ -6,6 +6,7 @@ import com.google.gson.GsonBuilder;
 
 public class BlockChain {
 
+    // mining difficulty - low difficulty like 1 or 2 can be solved nearly instantly - go for 4–6 for testing
     public static int difficulty = 5;
 
     // list capable of containing blockchains
@@ -29,7 +30,7 @@ public class BlockChain {
         // checking if our blockchain is valid
         System.out.println("\nBlockchain is valid: " + isChainValid());
 
-        // blockchain list print function in json format
+        // printing of the blockchain in json format
         String blockchainJson = new GsonBuilder().setPrettyPrinting().create().toJson(blockchain);
         System.out.println("\nThe block chain: ");
         System.out.println(blockchainJson);

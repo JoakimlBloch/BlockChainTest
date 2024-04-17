@@ -26,7 +26,7 @@ public class Block {
             StringUtil.applySha256(previousHash + timeStamp + nonce + data);
     }
 
-    // takes int called difficulty - number of 0’s they must solve for - low difficulty like 1 or 2 can be solved nearly instantly - go for 4–6 for testing.
+    // takes int called difficulty - number of 0’s they must solve for when mining
     public void mineBlock(int difficulty) {
 
         String target = new String(new char[difficulty]).replace('\0', '0'); // create a string with difficulty * "0"
